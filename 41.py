@@ -20,4 +20,3 @@ def g(left,right):
             j += 1
 
         return r
-print(g([2,1],[54,56,452,134]))
