@@ -6,9 +6,7 @@ def f(x):
     left = f(x[:m])
     right = f(x[m:])
     return g(left,right)
-
 def g(left,right):
-    
     r = []
     i,j = 0,0
     while i < len(left) and j < len(right):
@@ -18,6 +16,8 @@ def g(left,right):
         else:
             r.append(right[j])
             j += 1
+    r += left[i:]
+    r += right[j:]
+    return r
 
-        return r
-print(g([2,1],[54,56,452,134]))
+    
